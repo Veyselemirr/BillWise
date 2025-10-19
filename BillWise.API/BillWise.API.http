@@ -1,0 +1,6 @@
+@BillWise.API_HostAddress = http://localhost:5109
+
+GET {{BillWise.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

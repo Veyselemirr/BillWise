@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MF2LrDjpLSWdTpPyiMT6bRr+M+vWQ8mUyBWRfGdgD/U=",
+  "Source": "BillWise.API",
+  "BasePath": "_content/BillWise.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

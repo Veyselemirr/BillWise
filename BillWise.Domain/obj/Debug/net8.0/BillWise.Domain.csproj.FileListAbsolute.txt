@@ -1,0 +1,11 @@
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/bin/Debug/net8.0/BillWise.Domain.deps.json
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/bin/Debug/net8.0/BillWise.Domain.dll
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/bin/Debug/net8.0/BillWise.Domain.pdb
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/BillWise.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/BillWise.Domain.AssemblyInfoInputs.cache
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/BillWise.Domain.AssemblyInfo.cs
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/BillWise.Domain.csproj.CoreCompileInputs.cache
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/BillWise.Domain.dll
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/refint/BillWise.Domain.dll
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/BillWise.Domain.pdb
+/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/Debug/net8.0/ref/BillWise.Domain.dll
