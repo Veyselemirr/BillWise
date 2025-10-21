@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillWise.API", "BillWise.API\BillWise.API.csproj", "{AD54EB6B-CABE-4E2F-9949-E71E3963523F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillWise.Application", "BillWise.Application\BillWise.Application.csproj", "{A2F9BA2F-3392-44F6-82DC-98DE1206C109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillWise.Infrastructure", "BillWise.Infrastructure\BillWise.Infrastructure.csproj", "{1C3AD03E-EC74-48AC-8223-4F14F7B8545A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{AD54EB6B-CABE-4E2F-9949-E71E3963523F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD54EB6B-CABE-4E2F-9949-E71E3963523F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD54EB6B-CABE-4E2F-9949-E71E3963523F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F9BA2F-3392-44F6-82DC-98DE1206C109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F9BA2F-3392-44F6-82DC-98DE1206C109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F9BA2F-3392-44F6-82DC-98DE1206C109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F9BA2F-3392-44F6-82DC-98DE1206C109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C3AD03E-EC74-48AC-8223-4F14F7B8545A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3AD03E-EC74-48AC-8223-4F14F7B8545A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3AD03E-EC74-48AC-8223-4F14F7B8545A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3AD03E-EC74-48AC-8223-4F14F7B8545A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -39,6 +39,20 @@ namespace BillWise.Domain.Exceptions
         }
 
         /// <summary>
+        /// Genel mesaj ve hata listesi ile doğrulama hatası oluştur
+        /// FluentValidation sonuçları için kullanışlı
+        /// </summary>
+        /// <param name="message">Genel hata mesajı</param>
+        /// <param name="errors">Hata listesi</param>
+        public ValidationException(string message, List<string> errors) : base(message)
+        {
+            Errors = new Dictionary<string, List<string>>
+            {
+                ["General"] = errors
+            };
+        }
+
+        /// <summary>
         /// Mevcut exception'a yeni hata ekle
         /// Birden fazla hata biriktirmek için
         /// </summary>

@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Infrastructure/BillWise.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/BillWise.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/BillWise.Domain.csproj",
+        "projectName": "BillWise.Domain",
+        "projectPath": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/BillWise.Domain.csproj",
+        "packagesPath": "/Users/veyselemiryurtseven/.nuget/packages/",
+        "outputPath": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/veyselemiryurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Infrastructure/BillWise.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Infrastructure/BillWise.Infrastructure.csproj",
+        "projectName": "BillWise.Infrastructure",
+        "projectPath": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Infrastructure/BillWise.Infrastructure.csproj",
+        "packagesPath": "/Users/veyselemiryurtseven/.nuget/packages/",
+        "outputPath": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/veyselemiryurtseven/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/BillWise.Domain.csproj": {
+                "projectPath": "/Users/veyselemiryurtseven/Desktop/Project/BillWise/BillWise.Domain/BillWise.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

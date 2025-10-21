@@ -1,44 +1,87 @@
+using Microsoft.EntityFrameworkCore;
+using BillWise.Infrastructure.Data;
+using BillWise.Infrastructure.Data.Repositories;
+using BillWise.Domain.Interfaces;
+using BillWise.Domain.Interfaces.Repositories;
+using BillWise.Domain.Interfaces.Services;
+using BillWise.Application.Services;
+using BillWise.Application.Validators.Company;
+using FluentValidation;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// ========== DATABASE CONFIGURATION ==========
+builder.Services.AddDbContext<BillWiseDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// ========== REPOSITORY REGISTRATION ==========
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+// TODO: Diğer repository'ler eklenecek
+// builder.Services.AddScoped<IUserRepository, UserRepository>();
+// builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+// ========== UNIT OF WORK ==========
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// ========== SERVICE REGISTRATION ==========
+builder.Services.AddScoped<ICompanyService, CompanyService>();
+// TODO: Diğer servisler eklenecek
+
+// ========== VALIDATOR REGISTRATION ==========
+builder.Services.AddScoped<CreateCompanyRequestValidator>();
+builder.Services.AddScoped<UpdateCompanyRequestValidator>();
+// FluentValidation assembly scan (opsiyonel)
+builder.Services.AddValidatorsFromAssemblyContaining<CreateCompanyRequestValidator>();
+
+// ========== AUTOMAPPER ==========
+builder.Services.AddAutoMapper(typeof(BillWise.Application.Mappings.AutoMapperProfile));
+
+// ========== CONTROLLERS ==========
+builder.Services.AddControllers();
+
+// ========== SWAGGER/OPENAPI ==========
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new() { Title = "BillWise API", Version = "v1" });
+});
+
+// ========== CORS (Development) ==========
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// ========== MIDDLEWARE PIPELINE ==========
+
+// CORS
+app.UseCors("AllowAll");
+
+// Swagger (Development only)
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "BillWise API v1");
+    });
 }
 
+// HTTPS Redirection
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// Authentication & Authorization (şimdilik yok)
+// app.UseAuthentication();
+// app.UseAuthorization();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+// Map Controllers
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
