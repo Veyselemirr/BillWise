@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BillWise.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da6d15624039e15c0c10c2c071f1a6014547e3db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7377a44ef8fd76dadece28a012b3e378f5ae106c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BillWise.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BillWise.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
